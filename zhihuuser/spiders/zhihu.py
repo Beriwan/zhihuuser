@@ -34,7 +34,7 @@ class ZhihuSpider(Spider):
             if field in result.keys():
                 item[field] = result.get(field)
         yield item
-        yield Request(self.follows_url.format(user=result.get('url_token'), include=self.follows_query),
+        yield Request(self.follows_url.format(user=result.get('url_token'), include=self.follows_query, offset=0, limit=20),
                       self.parse_follows)
 
     def parse_follows(self, response):
