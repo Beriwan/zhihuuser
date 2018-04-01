@@ -1,2 +1,2 @@
 # Zhihu
-Scrapy爬取知乎用户信息
+分布式Scrapy爬取知乎用户信息
